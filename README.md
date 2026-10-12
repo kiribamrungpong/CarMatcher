@@ -1,3 +1,5 @@
-# CarMatcher
+## Planned Features
 
-A vehicle recommendation system that helps users find cars based on budget and personal preferences.
+- Budget-based car recommendations
+- Vehicle type filtering
+- Vehicle comparison

@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block breadcrumb %}<a href="/">Find a Car</a> &gt; Search Results{% endblock %}
+
+{% block page_1%}
+
+<p>
+  <a href="/?budget={{ budget }}&body_type={{ body_type }}">&laquo; Back to search (your answers are kept)</a>
+  |
+  <a href="/start-over?budget={{ budget }}&body_type={{ body_type }}">Start Over</a>
+</p>
+
+<h2>Search Results: {{ body_type }} at or under {{ budget | money }}</h2>
+
+{% if matches %}
+
+  <p>Vehicles found: {{ matches | length }}. Lowest price first.</p>
+  <p>Future version will show closest match % first.</p>
+  <table>
+    <tr>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Year</th>
+      <th>Body Type</th>
+      <th>Starting Price</th>
+      <th>Under Budget</th>
+    </tr>
+    {% for vehicle in matches %}
+    <tr>
+      <td>{{ vehicle.make }}</td>
+      <td>{{ vehicle.model }}</td>
+      <td>{{ vehicle.year }}</td>
+      <td>{{ vehicle.body_type }}</td>
+      <td>{{ vehicle.price | money }}</td>
+      <td>{{ (budget - vehicle.price) | money }} under</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <p><strong>Not satisfied ?</strong> Raise your budget or pick
+     another vehicle type, then click Update Results.</p>
+
+{% else %}
+
+  <p><strong>No vehicles match your preferences. Try increasing your budget or
+     selecting a different vehicle type.</strong></p>
+
+  {% if cheapest %}
+    <p>The cheapest {{ body_type }} on our list is the {{ cheapest.year }} {{ cheapest.make }}
+       {{ cheapest.model }} at {{ cheapest.price | money }}.</p>
+  {% endif %}
+
+  <p>You can keep your budget but decrease the vehicle size for a better chance of a match:</p>
+    <a href="/results?budget={{ budget }}&body_type=Sedan">Sedan</a> |
+    <a href="/results?budget={{ budget }}&body_type=Coupe">Coupe</a> |
+    <a href="/results?budget={{ budget }}&body_type=SUV">SUV</a> |
+    <a href="/results?budget={{ budget }}&body_type=Truck">Truck</a>
+  </p>
+
+{% endif %}
+
+<form action="/results" method="get">
+  <fieldset>
+    <legend>Refine Your Search</legend>
+
+    <label for="budget">Maximum budget ($):</label>
+    <input type="text" id="budget" name="budget" class="text-box" value="{{ budget }}">
+
+    <p>Vehicle type:
+      <input type="radio" id="sedan" name="body_type" value="Sedan" {% if body_type == "Sedan" %}checked{% endif %}>
+      <label for="sedan">Sedan</label>
+      <input type="radio" id="coupe" name="body_type" value="Coupe" {% if body_type == "Coupe" %}checked{% endif %}>
+      <label for="coupe">Coupe</label>
+      <input type="radio" id="suv" name="body_type" value="SUV" {% if body_type == "SUV" %}checked{% endif %}>
+      <label for="suv">SUV</label>
+      <input type="radio" id="truck" name="body_type" value="Truck" {% if body_type == "Truck" %}checked{% endif %}>
+      <label for="truck">Truck</label>
+    </p>
+
+    <p>
+      <button type="submit">Update Results</button>
+      Change either one, then click Update Results. Results will be reflected immediately.
+    </p>
+  </fieldset>
+</form>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% block breadcrumb %}<a href="/">Find a Car</a> &gt; Start Over{% endblock %}
+
+{% block page_1 %}
+<h2>Start over?</h2>
+
+<p>This clears your budget and vehicle type. You'll need to enter them again.</p>
+
+<p>
+  <a href="/">Yes, start over</a>
+  |
+  <a href="/results?budget={{ budget }}&body_type={{ body_type }}">No, keep my answers</a>
+</p>
+{% endblock %}

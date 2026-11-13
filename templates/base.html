@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Matcher</title>
+  <link rel="icon" href="/static/favicon.png">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>Car Matcher</h1>
+    <p>Find the car that fits you.</p>
+    <p><a href="/">Find a Car</a> | <a href="/tips">Useful Tips</a></p>
+    <p>You are here: {% block breadcrumb %}Find a Car{% endblock %}</p>
+  </header>
+
+  <main>
+    {% block page_1%}{% endblock %}
+  </main>
+
+  <footer>
+    <p><a href="/">Find a Car</a> | <a href="/tips">Useful Tips</a></p>
+    <p>Prices don't include local taxes, dealer fees, options, or dealer Mark Ups.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: black;
+  background-color: white;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: black;
+  color: white;
+  padding: 15px 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 5px 0;
+}
+
+header a {
+  color: white;
+  font-weight: bold;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+legend {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0;
+}
+
+.text-box {
+  font-size: 16px;
+  padding: 5px;
+  width: 200px;
+}
+
+button {
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.help {
+  color: dimgray;
+  font-size: 14px;
+}
+
+.error {
+  color: #cc0000; 
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid lightgray;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #eeeeee;
+}
+
+footer {
+  font-size: 14px;
+  color: gray;
+  text-align: center;
+  border-top: 1px solid lightgray;
+  margin-top: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid lightgray;
+}
+
+summary {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}

@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block page_1%}
+<h2>Find Your Ideal Car</h2>
+
+<p>Choose your preferences for the type of vehicle you wish to acquire.
+   If you are confused about how to use the website, please refer to the
+   <a href="/tips">Useful Tips Page</a>.</p>
+
+<h3>Why Use Car Matcher?</h3>
+<ul>
+  <li><strong>Stay on budget.</strong> Every car we show is priced at or below your maximum specified budget.</li>
+  <li><strong>Only the type of vehicle you want.</strong> No looking through vehicles that don't fit your needs.</li>
+  <li><strong>Free and quick.</strong> No account or registration required, Only takes a second to process !</li>
+</ul>
+
+<form action="/results" method="get">
+
+  <fieldset>
+    <legend>Step 1 - Budget</legend>
+
+    <label for="budget">Maximum budget   $</label>
+    <input type="text" id="budget" name="budget" class="text-box" placeholder="Example: 25000" value="{{ budget }}">
+
+    {% if budget_error %}
+      <p class="error"><strong>{{ budget_error }}</strong></p>
+    {% else %}
+      <p class="help">Numbers only, no letters !</p>
+    {% endif %}
+
+    <p>Or pick a popular budget:
+      <a href="/?budget=20000">$20,000</a> |
+      <a href="/?budget=25000">$25,000</a> |
+      <a href="/?budget=30000">$30,000</a> |
+      <a href="/?budget=40000">$40,000</a> |
+      <a href="/?budget=50000">$50,000</a>
+    </p>
+  </fieldset>
+
+  <fieldset>
+    <legend>Step 2 - Vehicle Type</legend>
+
+    <p>
+      <input type="radio" id="sedan" name="body_type" value="Sedan" {% if body_type == "Sedan" %}checked{% endif %}>
+      <label for="sedan"><strong>Sedan</strong>: 4 doors, comfortable for daily commuting and efficiency</label>
+    </p>
+    <p>
+      <input type="radio" id="coupe" name="body_type" value="Coupe" {% if body_type == "Coupe" %}checked{% endif %}>
+      <label for="coupe"><strong>Coupe</strong>: 2 doors, sporty, sleek and fun to drive</label>
+    </p>
+    <p>
+      <input type="radio" id="suv" name="body_type" value="SUV" {% if body_type == "SUV" %}checked{% endif %}>
+      <label for="suv"><strong>SUV</strong>: More cargo space and higher seating for a comfortable driving experience</label>
+    </p>
+    <p>
+      <input type="radio" id="truck" name="body_type" value="Truck" {% if body_type == "Truck" %}checked{% endif %}>
+      <label for="truck"><strong>Truck</strong>: Perfect for the working man lifestyle with the ability to haul large cargow/tow</label>
+    </p>
+
+    {% if type_error %}
+      <p class="error"><strong>{{ type_error }}</strong></p>
+    {% endif %}
+
+
+  </fieldset>
+
+  <p>
+    <button type="submit">Find My Car</button>
+    Shows every vehicle on our list that's at or under your budget in the type you chose.
+  </p>
+</form>
+{% endblock %}

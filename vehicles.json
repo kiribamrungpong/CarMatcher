@@ -1,0 +1,24 @@
+[
+  {"make": "Nissan", "model": "Sentra", "year": 2026, "body_type": "Sedan", "price": 21590},
+  {"make": "Hyundai", "model": "Elantra", "year": 2026, "body_type": "Sedan", "price": 22125},
+  {"make": "Toyota", "model": "Corolla", "year": 2026, "body_type": "Sedan", "price": 22825},
+  {"make": "Honda", "model": "Civic", "year": 2026, "body_type": "Sedan", "price": 24950},
+  {"make": "Toyota", "model": "Camry", "year": 2026, "body_type": "Sedan", "price": 28400},
+  {"make": "Tesla", "model": "Model 3", "year": 2026, "body_type": "Sedan", "price": 36990},
+  {"make": "BMW", "model": "3 Series", "year": 2026, "body_type": "Sedan", "price": 45500},
+  {"make": "Toyota", "model": "GR86", "year": 2026, "body_type": "Coupe", "price": 30300},
+  {"make": "Ford", "model": "Mustang", "year": 2026, "body_type": "Coupe", "price": 31920},
+  {"make": "Nissan", "model": "Z", "year": 2026, "body_type": "Coupe", "price": 42970},
+  {"make": "Kia", "model": "Seltos", "year": 2026, "body_type": "SUV", "price": 24690},
+  {"make": "Hyundai", "model": "Tucson", "year": 2026, "body_type": "SUV", "price": 28705},
+  {"make": "Toyota", "model": "RAV4", "year": 2026, "body_type": "SUV", "price": 28850},
+  {"make": "Mazda", "model": "CX-5", "year": 2026, "body_type": "SUV", "price": 29990},
+  {"make": "Honda", "model": "CR-V", "year": 2026, "body_type": "SUV", "price": 30850},
+  {"make": "Chevrolet", "model": "Equinox EV", "year": 2026, "body_type": "SUV", "price": 34995},
+  {"make": "Ford", "model": "Maverick", "year": 2026, "body_type": "Truck", "price": 28145},
+  {"make": "Hyundai", "model": "Santa Cruz", "year": 2026, "body_type": "Truck", "price": 28750},
+  {"make": "Toyota", "model": "Tacoma", "year": 2026, "body_type": "Truck", "price": 31590},
+  {"make": "Subaru", "model": "Crosstrek", "year": 2026, "body_type": "SUV", "price": 26540}
+  
+  
+]

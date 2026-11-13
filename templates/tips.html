@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block breadcrumb %}Useful Tips{% endblock %}
+
+{% block page_1%}
+<h2>Useful Tips</h2>
+
+<p>A quick guide to using Car Matcher, with sample pictures from the site.
+   Read as much or as little as you like. Click "More details" to see more.
+   You can start searching at any time: <a href="/">Find a Car</a>.</p>
+
+<h3>Step 1: Enter your maximum budget</h3>
+<p>Type the most you want to spend, using numbers only (for example, 30000), or click
+   one of the popular budgets to fill it in. Car Matcher only shows cars priced at or
+   under this amount.</p>
+
+<details>
+  <summary>More details</summary>
+  <p>Commas and a dollar sign are OK too, so 30,000 and $30000 both work.</p>
+  <p>If you type something that isn't a number, or a number that's 0 or less, a red
+     message under the box tells you how to fix it. Your answers stay filled in.</p>
+  <img src="/static/images/budget.png" alt="The budget box with popular budget links under it" width="560">
+  <p>Figure 1. The budget box</p>
+</details>
+
+<h3 id="vehicle-types">Step 2: Choose a vehicle type</h3>
+<ul>
+  <li><strong>Sedan:</strong> four doors and a trunk. Good for commuting.</li>
+  <li><strong>Coupe:</strong> two doors and a sporty shape. Fun to drive, less room.</li>
+  <li><strong>SUV:</strong> taller, with more room for passengers and cargo.</li>
+  <li><strong>Truck:</strong> an open bed for hauling and towing.</li>
+</ul>
+
+<details>
+  <summary>More details</summary>
+  <p>Pick one type. If you're not sure, try one, then switch types on the results
+     page to compare.</p>
+  <img src="/static/images/types.png" alt="The four vehicle type choices" width="440">
+  <p>Figure 2. Vehicle type choices</p>
+</details>
+
+<h3>Step 3: Read your results</h3>
+<p>Click <strong>Find My Car</strong>. You'll see every car on our list that fits,
+   cheapest first, with how much each one is under your budget.</p>
+
+<details>
+  <summary>More details</summary>
+  <p>To change your search, use <strong>Refine Your Search</strong> under the results
+     and click <strong>Update Results</strong>. Your list is replaced right away.</p>
+  <p>If nothing matches, the page tells you the cheapest car of that type and gives you
+     links to try a different type with the same budget.</p>
+  <img src="/static/images/results.png" alt="A results table showing four SUVs under $30,000" width="660">
+  <p>Figure 3. Search results</p>
+</details>
+
+<h3>Going back and starting over</h3>
+<ul>
+  <li><strong>Back to search</strong> takes you to the form with your answers still filled in.</li>
+  <li><strong>Start Over</strong> clears your answers, but it asks you first, so you can change your mind.</li>
+</ul>
+
+<h3>Good to know</h3>
+<ul>
+  <li>Prices are approximate starting prices for each 2025 model's base trim. Taxes,
+      dealer fees, and options will add to what you pay.</li>
+  <li>Car Matcher is free, needs no account, and doesn't save your answers.</li>
+</ul>
+
+<p>Ready? <a href="/">Start finding cars &raquo;</a></p>
+{% endblock %}
